@@ -1,0 +1,14 @@
+---
+- name: Running From My GitHub Repository To Devnet-Sandbox
+  hosts: all
+  gather_facts: false
+
+  tasks:
+    - name: Show IOS Version & Show Route
+      ios_command:
+        commands:
+         - show version | sec IOS
+         - show ip int brief 
+         - show ip route
+      register: output
+    - debug: var=output.stdout_lines
