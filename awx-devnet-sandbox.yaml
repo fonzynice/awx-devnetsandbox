@@ -8,7 +8,6 @@
       ios_command:
         commands:
          - show version | sec IOS
-         - show ip int brief 
-         - show ip route
+         - show ip int brief | ex un
       register: output
     - debug: var=output.stdout_lines
