@@ -9,5 +9,7 @@
         commands:
          - show version | sec IOS
          - show ip int brief | ex un
+      vars:
+        ansible_command_timeout: 60
       register: output
     - debug: var=output.stdout_lines
