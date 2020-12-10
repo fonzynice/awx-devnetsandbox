@@ -8,7 +8,7 @@
       ios_command:
         commands:
          - show version | sec IOS
-         - show ip int brief 
+         - show ip arp
   
       register: output
     - debug: var=output.stdout_lines
