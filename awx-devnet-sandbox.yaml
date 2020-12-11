@@ -8,7 +8,7 @@
       ios_command:
         commands:
          - show version | sec IOS
-         - show ip interface brief | ex un
+         - show ip interface brief
   
       register: output
     - debug: var=output.stdout_lines
