@@ -9,7 +9,6 @@
         commands:
          - show version | sec IOS
          - show ip interface brief
-         - show ip arp
   
       register: output
     - debug: var=output.stdout_lines
