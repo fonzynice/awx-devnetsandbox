@@ -4,15 +4,15 @@
   gather_facts: false
 
   tasks:
-#    - name: configure Loopback 100 & 101 interfaces settings
-#      ios_config:
-#        lines:
-#        - ip address 172.16.1.100 255.255.0.0
-#        - ip address 172.16.1.101 255.255.0.0
-#        parents: "{{ item }}"
-#      with_items:
-#      - interface Loopback 100
-#      - interface Loopback 101
+   - name: configure Loopback 100 & 101 interfaces settings
+     ios_config:
+       lines:
+       - ip address 172.16.1.1 255.255.0.0
+       - ip address 172.16.2.2 255.255.255.0
+       parents: "{{ item }}"
+     with_items:
+     - interface Loopback 100
+     - interface Loopback 101
 
 
     - name: configure Loopback interface settings
